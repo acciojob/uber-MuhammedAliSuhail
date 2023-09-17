@@ -8,7 +8,7 @@ public class TripBooking {
 
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer TicketBookingId;
+    private Integer TripBookingId;
 
     private String FromLocation;
     private String ToLocation;
@@ -37,7 +37,7 @@ public class TripBooking {
     private TripStatus tripStatus;
 
     public TripBooking(Integer ticketBookingId, String fromLocation, String toLocation, Integer distanceInKm, TripStatus tripStatus, Integer bill, Customer customer, Driver driver) {
-        TicketBookingId = ticketBookingId;
+        TripBookingId = ticketBookingId;
         FromLocation = fromLocation;
         ToLocation = toLocation;
         DistanceInKm = distanceInKm;
@@ -54,12 +54,12 @@ public class TripBooking {
     @JoinColumn
     Customer customer;
 
-    public Integer getTicketBookingId() {
-        return TicketBookingId;
+    public Integer getTripBookingId() {
+        return TripBookingId;
     }
 
-    public void setTicketBookingId(Integer ticketBookingId) {
-        TicketBookingId = ticketBookingId;
+    public void setTripBookingId(Integer tripBookingId) {
+        TripBookingId = tripBookingId;
     }
 
     public String getFromLocation() {

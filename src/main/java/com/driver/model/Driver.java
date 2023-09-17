@@ -15,7 +15,8 @@ public class Driver {
     private Integer DriverId;
 
 
-    private String MobileNo;
+    private String Mobile;
+
     private String Password;
 
     public Driver() {
@@ -26,18 +27,18 @@ public class Driver {
     Cab cab;
 
     public Driver(String mobileNo, String password) {
-        MobileNo = mobileNo;
+        Mobile = mobileNo;
         Password = password;
     }
 
     public Driver(String mobileNo, String password, Cab cab) {
-        MobileNo = mobileNo;
+        Mobile = mobileNo;
         Password = password;
         this.cab = cab;
     }
 
     public Driver(String mobileNo, String password, Cab cab, List<TripBooking> tripBookingList) {
-        MobileNo = mobileNo;
+        Mobile = mobileNo;
         Password = password;
         this.cab = cab;
         this.tripBookingList = tripBookingList;
@@ -49,7 +50,7 @@ public class Driver {
 
     public Driver(Integer driverId, String mobileNo, String password, Cab cab, List<TripBooking> tripBookingList) {
         DriverId = driverId;
-        MobileNo = mobileNo;
+        Mobile = mobileNo;
         Password = password;
         this.cab = cab;
         this.tripBookingList = tripBookingList;
@@ -60,11 +61,11 @@ public class Driver {
     }
 
     public String getMobileNo() {
-        return MobileNo;
+        return Mobile;
     }
 
     public void setMobileNo(String mobileNo) {
-        MobileNo = mobileNo;
+        Mobile = mobileNo;
     }
 
     public String getPassword() {

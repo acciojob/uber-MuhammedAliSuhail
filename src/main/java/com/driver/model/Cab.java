@@ -8,8 +8,8 @@ import javax.persistence.*;
 public class Cab {
 
     public Cab(Integer parkingRate, Boolean available) {
-        ParkingRate = parkingRate;
-        Available = available;
+        PerKmRate = parkingRate;
+        Status = available;
     }
 
     @Id
@@ -17,24 +17,24 @@ public class Cab {
     private Integer id;
 
     public Cab(Integer parkingRate, Boolean available, Driver driver) {
-        ParkingRate = parkingRate;
-        Available = available;
+        PerKmRate = parkingRate;
+        Status = available;
         this.driver = driver;
     }
 
     public Cab() {
     }
 
-    private Integer ParkingRate;
+    private Integer PerKmRate;
 
     public Cab(Integer id, Integer parkingRate, Boolean available, Driver driver) {
         this.id = id;
-        ParkingRate = parkingRate;
-        Available = available;
+        PerKmRate = parkingRate;
+        Status = available;
         this.driver = driver;
     }
 
-    private Boolean Available;
+    private Boolean Status;
 
     public Integer getId() {
         return id;
@@ -44,20 +44,20 @@ public class Cab {
         this.id = id;
     }
 
-    public Integer getParkingRate() {
-        return ParkingRate;
+    public Integer getPerKmRate() {
+        return PerKmRate;
     }
 
-    public void setParkingRate(Integer parkingRate) {
-        ParkingRate = parkingRate;
+    public void setPerKmRate(Integer perKmRate) {
+        PerKmRate = perKmRate;
     }
 
-    public Boolean getAvailable() {
-        return Available;
+    public Boolean getStatus() {
+        return Status;
     }
 
-    public void setAvailable(Boolean available) {
-        Available = available;
+    public void setStatus(Boolean status) {
+        Status = status;
     }
 
     public Driver getDriver() {

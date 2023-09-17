@@ -9,35 +9,35 @@ public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer adminId;
 
 
     @Column(nullable = false)
-    private String userName;
+    private String username;
 
     public Admin(Integer id, String userName, String password) {
-        this.id = id;
-        this.userName = userName;
+        this.adminId = id;
+        this.username = userName;
         Password = password;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getAdminId() {
+        return adminId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setAdminId(Integer adminId) {
+        this.adminId = adminId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public Admin() {
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -49,7 +49,7 @@ public class Admin {
     }
 
     public Admin(String userName, String password) {
-        this.userName = userName;
+        this.username = userName;
         Password = password;
     }
 
